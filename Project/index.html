@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Unique Chess</title>
+    <link rel="icon" href="King.png" sizes="16x16" type="image/png" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <script>
+  function allowDrop(ev) {
+    ev.preventDefault();
+  }
+  
+  function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+  }
+  
+  function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));
+  }
+  </script>
+
+  <body>
+    <div class="gameContainer">
+      <div class="container">
+        <h1 class="text-center text-white display-4">Unique Chess</h1>
+      </div>
+      <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)" class="card" style="background-color: antiquewhite;">
+        <img id="drag1" draggable="true" ondragstart="drag(event)" src="King.png" class="back" alt="King" />
+        
+      </div>
+      <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)" class="card" style="background-color: aqua;" >
+        
+      </div>
+      <div id="div3" ondrop="drop(event)" ondragover="allowDrop(event)" class="card" style="background-color: aquamarine;">
+        
+      </div>
+      <div id="div4" ondrop="drop(event)" ondragover="allowDrop(event)" class="card" style="background-color: azure;">
+        
+      </div>
+      <div id="div5" ondrop="drop(event)" ondragover="allowDrop(event)" class="card" style="background-color:brown;">
+        
+      </div>
+      <div id="div6" ondrop="drop(event)" ondragover="allowDrop(event)" class="card" style="background-color:burlywood;">
+        
+      </div>
+      <div id="div7" ondrop="drop(event)" ondragover="allowDrop(event)" class="card" style="background-color: black;">
+        
+      </div>
+      <div id="div8" ondrop="drop(event)" ondragover="allowDrop(event)" class="card" style="background-color: blanchedalmond;">
+        
+      </div>
+      <div id="div9" ondrop="drop(event)" ondragover="allowDrop(event)" class="card" style="background-color:cadetblue;">
+        
+      </div>
+      <div id="div10" ondrop="drop(event)" ondragover="allowDrop(event)" class="card" style="background-color:chartreuse;">
+        
+      </div>
+      <div id="div11" ondrop="drop(event)" ondragover="allowDrop(event)" class="card" style="background-color: blue;">
+        
+      </div>
+      <div id="div12" ondrop="drop(event)" ondragover="allowDrop(event)" class="card" style="background-color:blueviolet;">
+        
+      </div>
+
+      <button class="submit">Submit</button>
+      
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
